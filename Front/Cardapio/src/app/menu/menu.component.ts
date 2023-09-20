@@ -11,35 +11,42 @@ export class MenuComponent {
 
   public produtos: produto[] = [
     {
-      nome: 'Sanduiche gaiteiro',
-      preco: '14,99',
+      nome: 'X-burger',
+      valor: '14,99',
       categoria: 'Sanduíche',
-      descricao: 'bão dms'
+      descricao: 'Pão, hambuguer, salame e alface'
     },
     {
       nome: 'Beirute',
-      preco: '14,99',
+      valor: '14,99',
       categoria: 'Sanduíche',
-      descricao: 'bão dms'
+      descricao: 'Pão sírio, ovo, alface, tomate, queijo, presunto'
     },
     {
       nome: 'Pizza',
-      preco: '14,99',
+      valor: '14,99',
       categoria: 'Pizza',
-      descricao: 'bão dms'
+      descricao: 'sample text'
     },
     {
       nome: 'Coca-cola',
-      preco: '14,99',
+      valor: '14,99',
       categoria: 'Bebidas',
-      descricao: 'bão dms'
+      descricao: 'sample text'
     },
     {
-      nome: 'Grogue-Express',
-      preco: '14,99',
-      categoria: 'drinks',
-      descricao: 'bão dms'
+      nome: 'Ponche Goiano',
+      valor: '14,99',
+      categoria: 'Drinks',
+      descricao: 'maçã, laranja, morango, calda de abacaxi, vinho tinto, vinho branco e água com gás.'
+    },
+    {
+      nome: "Empadão goiano",
+      valor: "12,99",
+      categoria: "tortas",
+      descricao: "sample text"
     }
+
   ]
 
   public categorias: string[] = []
@@ -57,7 +64,7 @@ export class MenuComponent {
     for (let produto of this.produtos) {
       const findCategory: string | undefined = this.categorias.find(categoria => produto.categoria === categoria)
       if (!findCategory) {
-        this.categorias.push(produto.categoria)
+        this.categorias.push(produto.categoria.replace(/(^|\s)([^\s]+)/g, match => match.charAt(0).toUpperCase() + match.slice(1)))
       }
     }
   }
