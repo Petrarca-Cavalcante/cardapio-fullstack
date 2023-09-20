@@ -1,0 +1,10 @@
+accordion-group {
+  margin-bottom: 8px;
+  ::ng-deep {
+    .btn-link {
+      text-decoration: none;
+      color: var(--black);
+      font-weight: 500;
+    }
+  }
+}
