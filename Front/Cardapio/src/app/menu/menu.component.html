@@ -1,0 +1,14 @@
+<accordion *ngFor="let categoria of categorias" [isAnimated]="true">
+  <accordion-group [heading]="categoria" >
+    <div *ngFor="let produto of produtos" class="categories-organizer">
+      <div *ngIf="produto.categoria.toLowerCase() === categoria.toLowerCase()">
+        <div class="product-card">
+          <h4 class="product-name">{{produto.nome}}</h4>
+          <p class="product-description">{{produto.descricao}}</p>
+          <p class="product-price">{{produto.valor}}</p>
+        </div>
+      </div>
+    </div>
+  </accordion-group>
+</accordion>
+
