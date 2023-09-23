@@ -1,3 +1,3 @@
 export interface produto {
-  nome:string, valor: string, categoria:string, descricao: string
+  id: number, nome: string, valor: string, categoria: string, descricao: string
 }
