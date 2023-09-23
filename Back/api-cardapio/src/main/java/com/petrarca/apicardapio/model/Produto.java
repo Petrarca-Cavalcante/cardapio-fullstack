@@ -18,7 +18,7 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id; 
 
-    @Column(length = 25, nullable = false)
+    @Column(length = 25, nullable = false, unique = true)
     private String nome;
 
     @Column(nullable = false)
@@ -69,11 +69,11 @@ public class Produto {
     }
     
     public String getCategoria(){
-        return categoria;
+        return categoria.toLowerCase();
     }
 
     public void setCategoria(String categoria){
-        this.categoria = categoria;
+        this.categoria = categoria.toLowerCase();
     }
 
     public String getDescricao(){
