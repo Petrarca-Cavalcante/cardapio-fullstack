@@ -1,0 +1,42 @@
+[
+  {
+    "nome": "Risole Misto",
+    "valor": 4.5,
+    "categoria": "salgados"
+  },
+  {
+    "nome": "Torta de frango",
+    "valor": 8.0,
+    "categoria": "TORTAS",
+    "descricao": "Fatia de torta de frango"
+  },
+  {
+    "nome": "Coca-Cola 250mL",
+    "valor": 4.0,
+    "categoria": "bebidas",
+    "descricao": "Coca da garrafinha"
+  },
+  {
+    "nome": "Torta de carne de sol",
+    "valor": 8.0,
+    "categoria": "tortas",
+    "descricao": "Fatia de torta de carne de sol"
+  },
+  {
+    "nome": "Ponche Goiano",
+    "valor": 14.0,
+    "categoria": "drinks",
+    "descricao": "maçã, laranja, morango, calda de abacaxi, vinho tinto, vinho branco e água com gás."
+  },
+  {
+    "nome": "Empadão goiano",
+    "valor": 12.99,
+    "categoria": "tortas"
+  },
+  {
+    "nome": "Beirute",
+    "valor": 12.50,
+    "categoria": "Sanduíche",
+    "descricao": "Pão sírio, ovo, alface, tomate, queijo, presunto"
+  }
+]
