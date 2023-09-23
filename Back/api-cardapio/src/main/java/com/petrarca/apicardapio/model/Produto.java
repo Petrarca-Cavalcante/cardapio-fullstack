@@ -69,7 +69,7 @@ public class Produto {
     }
     
     public String getCategoria(){
-        return categoria.toLowerCase();
+        return categoria;
     }
 
     public void setCategoria(String categoria){
