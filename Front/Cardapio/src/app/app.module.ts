@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { MenuComponent } from './menu/menu.component';
+import { HttpClient, HttpClientModule } from "@angular/common/http"
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { MenuComponent } from './menu/menu.component';
     BrowserAnimationsModule,
     AccordionModule.forRoot(),
     ModalModule.forRoot(),
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

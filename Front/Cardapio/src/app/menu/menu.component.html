@@ -5,7 +5,7 @@
         <div class="product-card">
           <h4 class="product-name">{{produto.nome}}</h4>
           <p class="product-description">{{produto.descricao}}</p>
-          <p class="product-price">{{produto.valor}}</p>
+          <p class="product-price">R$ {{produto.valor | number:'1.2-2'}}</p>
         </div>
       </div>
     </div>
