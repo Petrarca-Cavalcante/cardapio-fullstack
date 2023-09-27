@@ -179,11 +179,11 @@ Nenhum, o máximo que pode acontecer é a lista estar vazia.
 ---
 ### 3 **Atualização de Produto**
 
-### `/user/:id_do_usuário`
+### `/user/:id_do_produto`
 
 ### Exemplo de Request:
 ```
-POST /user/6f278d88-c7bb-4993-851b-2fff06f18815
+PATCH /produto/1
 Host: localhost:8080
 Authorization: None
 Content-type: application/json
