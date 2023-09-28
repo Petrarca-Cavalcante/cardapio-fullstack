@@ -1,24 +1,29 @@
 <header>
-  <img class="logo" src="../../assets/burger-fast-food-svgrepo-com 1.svg" alt="" />
+  <img
+    class="logo"
+    src="../../assets/burger-fast-food-svgrepo-com 1.svg"
+    alt=""
+  />
   <h1>E-Menu</h1>
 </header>
 <main>
   <section class="menu-section">
-    <app-menu></app-menu>
+    <button type="button" (click)="openModal(template)" class="btn btn-primary">Criar produto</button>
+    <app-menu #menu></app-menu>
   </section>
-
-  <!-- <ng-template #template>
-    <div class="modal-header">
-      <h4 class="modal-title pull-left">Modal</h4>
-      <button
-        type="button"
-        class="btn-close close pull-right"
-        aria-label="Close"
-        (click)="modalRef?.hide()"
-      >
-        <span aria-hidden="true" class="visually-hidden">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">This is a modal.</div>
-  </ng-template> -->
 </main>
+
+
+
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Criar produto</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <app-criar-produto-form (submissaoBemSucedida)="modalRef?.hide()" (submissaoBemSucedida)="handleSubmissaoBemSucedida()"></app-criar-produto-form>
+  </div>
+</ng-template>

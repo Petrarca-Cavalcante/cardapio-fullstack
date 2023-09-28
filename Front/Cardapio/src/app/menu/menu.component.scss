@@ -21,6 +21,9 @@ accordion-group {
   padding: 15px 0 10px 15px;
   border-bottom: 1px solid var(--black);
   border-radius: 0 0 0 6px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   p {
     margin: 0;
   }
@@ -35,4 +38,15 @@ accordion-group {
 }
 .product-price {
   font-weight: 600;
+}
+
+.btn{
+  width: 85px;
+}
+
+.product-options {
+  display: flex;
+  justify-content: space-evenly;
+  max-height: 45px;
+  width: 190px;
 }

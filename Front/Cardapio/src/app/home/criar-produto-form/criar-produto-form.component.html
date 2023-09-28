@@ -1,0 +1,36 @@
+<form [formGroup]="form" (submit)="onSubmit()">
+  <div class="p-3">
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="">Nome</label>
+        <input type="text" [ngClass]="{'is-invalid': f.nome?.errors && f.nome?.touched}" class="form-control" formControlName="nome" placeholder="Insira o nome do produto">
+        <div *ngIf="f.nome.errors?.required" class="invalid-feedback">Nome é obrigatório</div>
+        <div *ngIf="f.nome.errors?.maxlength" class="invalid-feedback">Nome pode ter até 25 caracteres</div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="">Valor</label>
+        <input type="text" [ngClass]="{'is-invalid': f.valor?.errors && f.valor?.touched}" class="form-control" formControlName="valor" placeholder="Insira o valor do produto">
+        <div *ngIf="f.valor.errors?.required" class="invalid-feedback">Valor é obrigatório</div>
+        <div *ngIf="f.valor.errors?.pattern" class="invalid-feedback">Valor aceita apenas números</div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="">Categoria</label>
+        <input type="text" [ngClass]="{'is-invalid': f.categoria?.errors && f.categoria?.touched}" class="form-control" formControlName="categoria" placeholder="Insira a categoria do produto">
+        <div *ngIf="f.categoria.errors?.required" class="invalid-feedback">Categoria é obrigatória</div>
+        <div *ngIf="f.categoria.errors?.maxlength" class="invalid-feedback">Categoria pode ter até 15 caracteres</div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="">Descrição</label>
+        <input type="text" [ngClass]="{'is-invalid': f.descricao?.errors && f.descricao?.touched}" class="form-control" formControlName="descricao" placeholder="Insira a descrição do produto">
+        <div *ngIf="f.descricao.errors?.maxlength" class="invalid-feedback">Descrição não pode ter mais de 180 caracteres</div>
+      </div>
+    </div>
+  </div>
+  <button type="submit" [disabled]="!form.valid" class="btn btn-success">Confirmar</button>
+</form>

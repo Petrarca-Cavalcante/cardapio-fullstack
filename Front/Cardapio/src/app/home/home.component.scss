@@ -28,8 +28,17 @@ main {
 
 .menu-section {
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .btn-primary {
-  background-color: var(--main-color-3);
+  background-color: var(--confirm);
+  margin-bottom: 8px;
+}
+
+
+app-menu {
+  width: 100%;
 }
