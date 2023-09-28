@@ -8,14 +8,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { MenuComponent } from './menu/menu.component';
-import { HttpClient, HttpClientModule } from "@angular/common/http"
+import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { CriarProdutoFormComponent } from './home/criar-produto-form/criar-produto-form.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    CriarProdutoFormComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,9 @@ import { HttpClient, HttpClientModule } from "@angular/common/http"
     BrowserAnimationsModule,
     AccordionModule.forRoot(),
     ModalModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

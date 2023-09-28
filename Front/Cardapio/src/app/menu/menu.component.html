@@ -1,14 +1,50 @@
 <accordion *ngFor="let categoria of categorias" [isAnimated]="true">
-  <accordion-group [heading]="categoria" >
+  <accordion-group [heading]="categoria">
     <div *ngFor="let produto of produtos" class="categories-organizer">
       <div *ngIf="produto.categoria.toLowerCase() === categoria.toLowerCase()">
         <div class="product-card">
-          <h4 class="product-name">{{produto.nome}}</h4>
-          <p class="product-description">{{produto.descricao}}</p>
-          <p class="product-price">R$ {{produto.valor | number:'1.2-2'}}</p>
+          <div>
+            <h4 class="product-name">{{ produto.nome }}</h4>
+            <p class="product-description">{{ produto.descricao }}</p>
+            <p class="product-price">
+              R$ {{ produto.valor | number : "1.2-2" }}
+            </p>
+          </div>
+          <div class="product-options">
+            <button type="button" class="btn btn-primary" (click)="openModal(template2, produto)">Editar</button>
+            <button type="button" class="btn btn-danger" (click)="openModal(template1, produto)">Deletar</button>
+          </div>
         </div>
       </div>
     </div>
   </accordion-group>
 </accordion>
 
+
+
+
+
+<ng-template #template1>
+  <div class="modal-body text-center">
+    <p>Você realmente quer deletar este produto?</p>
+    <button type="button" class="btn btn-default" (click)="confirm()">
+      Sim
+    </button>
+    <button type="button" class="btn btn-primary" (click)="decline()">
+      Não
+    </button>
+  </div>
+</ng-template>
+
+
+<ng-template #template2>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{this.produtoSelecionado?.nome}}</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    
+  </div>
+</ng-template>
